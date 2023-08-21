@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Create User
+{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <h1 class="text-light mt-3">Create User Page</h1>
+        <form method="post" class="mx-auto w-50 mt-5">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="new_username" class="text-light">UserName:</label>
+                <input type="text" id="username" name="username" class="form-control" placeholder="Enter Username">
+            </div>
+            <div class="form-group">
+                <label for="new_password" class="text-light">Password:</label>
+                <input type="text" id="username" name="password" class="form-control" placeholder="Enter Password">
+            </div>
+            <button type="submit" class="btn btn-outline-primary mt-2">Create</button>
+        </form>
+    </div>
+
+{% endblock %}
+

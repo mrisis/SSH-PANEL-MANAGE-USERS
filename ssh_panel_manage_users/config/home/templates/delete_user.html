@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Delete User
+{% endblock %}
+
+
+{% block body %}
+    <div class="container">
+        <h1 class="text-light mt-3">Delete User Page</h1>
+        <form method="post" class="mx-auto w-50 mt-5">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="username" class="text-light">UserName:</label>
+                <input type="text" id="username" name="username" class="form-control" placeholder="Enter Username">
+            </div>
+            <button type="submit" class="btn btn-outline-danger mt-2">DELETE</button>
+        </form>
+    </div>
+{% endblock %}
+
+    <!-- <form method="post">
+        {% csrf_token %}
+        <label for="username">نام کاربری:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <button type="submit">حذف کاربر</button>
+    </form> -->
