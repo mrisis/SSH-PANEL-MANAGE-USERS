@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>خوش آمدید</title>
+{% extends 'base.html' %}
 
-</head>
-<body>
-  <h1>سایت در حال تعمیرات می باشد </h1>
-  <a href="ssh_panel_manage_users/config/home/templates/login.html">بازگشت</a>
-
-</body>
-</html>
+{% block body %}
+    <a href="{% url 'home' %}"></a>
+{% endblock %}
